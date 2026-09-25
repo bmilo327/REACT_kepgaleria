@@ -1,0 +1,18 @@
+article{
+    margin: auto;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.kiskep img{
+    width: 300px;
+}
+
+.nagykep img{
+    width: 800px;
+}
