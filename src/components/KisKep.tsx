@@ -10,7 +10,8 @@ interface KisKepProps {
 export default function KisKep({kepem, index, kepKivalaszt}:KisKepProps) {
     return (
         <div className="kiskep" onClick={()=>{kepKivalaszt(index)}}>
-            <img src={kepem.kep} alt={kepem.kep} />
+            <img src={kepem.kep} alt={kepem.kep}/>
+            <p className="kiskep-leiras">{kepem.leiras}</p>
         </div>
     )
 }
