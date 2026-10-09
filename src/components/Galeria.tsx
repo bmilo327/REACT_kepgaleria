@@ -3,16 +3,15 @@ import "./galeria.css";
 import KisKep from "./KisKep";
 
 interface GaleriaProps{
-    lista:KepTipus[],
-    kepKivalaszt: (index: number) => void
+    lista:KepTipus[]
 }
 
-export default function Galeria({lista, kepKivalaszt}:GaleriaProps) {
+export default function Galeria({ lista }:GaleriaProps) {
     return (
         <div className="galeria">
         {
             lista.map((e,i)=> {
-                return <KisKep kepem={e} index={i} key={i} kepKivalaszt={kepKivalaszt}/>
+                return <KisKep kepem={e} index={i} key={i}/>
             })
         }
         </div>

@@ -1,14 +1,15 @@
 import type { KepTipus } from "../adatok";
 import "./galeria.css";
+import { useKepContext } from "../contexts/KepContext";
 
 interface NagyKepProps {
     kepem:KepTipus,
-    index:number,
-    elozoKepKivalaszt:(index:number)=>void,
-    kovetkezoKepKivalaszt:(index:number)=>void,
+    index:number
 }
 
-export default function NagyKep({ kepem, index, elozoKepKivalaszt, kovetkezoKepKivalaszt }: NagyKepProps) {
+export default function NagyKep({ kepem, index }: NagyKepProps) {    
+    const { elozoKepKivalaszt, kovetkezoKepKivalaszt } = useKepContext();
+    
     return (
         <div className="tarolo">
             <button onClick={()=>{elozoKepKivalaszt(index)}}>◀</button>
