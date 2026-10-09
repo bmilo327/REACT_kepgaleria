@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, type ReactNode } from "react";
 import { KEPLISTA, type KepTipus } from "../adatok";
 
@@ -37,7 +36,7 @@ export function KepProvider({ children }: KepProviderProps) {
     return (
         <KepContext.Provider
             value={{ 
-                kepLista: [],
+                kepLista: KEPLISTA,
                 aktualisIndex: aktualisIndex,
                 elozoKepKivalaszt, 
                 kovetkezoKepKivalaszt, 
